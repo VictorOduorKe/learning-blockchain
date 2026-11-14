@@ -1,0 +1,10 @@
+{
+  "blockchain-day8/CertificateREgistry.sol": {
+    "__sources__": {
+      "blockchain-day8/CertificateREgistry.sol": {
+        "content": "\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.24;\n\ncontract CertificateRegistry {\n\n    // Stores registered certificate hashes\n    mapping(bytes32 => bool) public certificates;\n\n    // Register a certificate\n    function issueCertificate(bytes32 certificateHash) external {\n\n        require(\n            !certificates[certificateHash],\n            \"Certificate already exists\"\n        );\n\n        certificates[certificateHash] = true;\n    }\n\n    // Verify a certificate\n    function verifyCertificate(\n        bytes32 certificateHash\n    ) external view returns (bool) {\n\n        return certificates[certificateHash];\n    }\n}\n",
+        "file": "blockchain-day8/CertificateREgistry.sol"
+      }
+    }
+  }
+}
