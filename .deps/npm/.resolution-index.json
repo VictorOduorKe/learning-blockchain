@@ -6,5 +6,13 @@
         "file": "blockchain-day8/CertificateREgistry.sol"
       }
     }
+  },
+  "blockchain-day9/certificate.sol": {
+    "__sources__": {
+      "blockchain-day9/certificate.sol": {
+        "content": "\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\ncontract Certificate {\n\n    // State variables\n    string public ownerName;\n    uint256 public certificateId;\n    bool public isValid;\n\n    // Constructor runs when the contract is deployed\n    constructor(\n        string memory _ownerName,\n        uint256 _certificateId\n    ) {\n        ownerName = _ownerName;\n        certificateId = _certificateId;\n        isValid = true;\n    }\n\n    // Update certificate validity\n    function revokeCertificate() public {\n        isValid = false;\n    }\n}\n",
+        "file": "blockchain-day9/certificate.sol"
+      }
+    }
   }
 }
